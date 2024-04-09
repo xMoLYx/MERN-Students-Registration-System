@@ -11,10 +11,10 @@
 
 .header {
     position: fixed;
-    top: 2%;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 1px;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -102,7 +102,7 @@ body {
 
 .input_box label {
     position: absolute;
-    top: 50%;
+    top: -5px;
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
@@ -112,10 +112,6 @@ body {
     transition: 0.5s;
 }
 
-.input_box input:focus~label,
-.input_box input:valid~label {
-    top: -5px;
-}
 
 .input_box input {
     width: 100%;
