@@ -11,10 +11,10 @@
 
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -2%;
+    left: -5%;
     width: 100%;
-    padding: 1px;
+    padding: 20px 100px;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -80,6 +80,18 @@ body {
 }
 
 .box.active .main_box.register {
+    
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.box .main_box.forgot-password {
+    position: absolute;
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.box.active .main_box.forgot-password {
     transition: transform .18s ease;
     transform: translateX(0);
 }
@@ -102,7 +114,7 @@ body {
 
 .input_box label {
     position: absolute;
-    top: -5px;
+    top: 50%;
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
@@ -112,6 +124,11 @@ body {
     transition: 0.5s;
 }
 
+
+.input_box input:focus~label,
+.input_box input:valid~label {
+    top: -5px;
+}
 
 .input_box input {
     width: 100%;
@@ -199,3 +216,5 @@ body {
 .checkbox {
     margin-right: 5px;
 }
+
+

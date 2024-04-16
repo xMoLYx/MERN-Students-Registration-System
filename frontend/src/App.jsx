@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import Navbar from '../src/components/Navbar';
 import Login from '../src/pages/Login';
 import Home from '../src/pages/Home';
-import Register from '../src/pages/Register'
+import ResetPassword from '../src/pages/ResetPassword'
 import axios from 'axios';
 import {Toaster} from 'react-hot-toast';
 import { UserContextProvider } from '../context/userContext';
@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Login />} />
       <Route path='/home' element={<Home />} />
-      <Route path='/register' element={<Register />} />
+      <Route path='/reset-password/:token' element={<ResetPassword />} />
       <Route path='/Dashboard' element={<Dashboard />} />
     </Routes>
     </UserContextProvider>
