@@ -1,11 +1,12 @@
-/* Styl dla kontenera tabeli */
+/* Style for the table container */
 .table-container {
     width: 100%;
-    height: 70%; /* Dostosuj do wymaganego rozmiaru */
+    height: 70%;
     padding: 10px;
     box-sizing: border-box;
     margin-top: 50%;
 }
+
 .student-container {
     display: flex;
     flex-direction: column;
@@ -23,7 +24,8 @@
     width: 100%;
     display: flex;
 }
-/* Styl dla tabeli */
+
+/* Style for the table */
 .student-table {
     width: 100%;
     border-collapse: collapse;
@@ -52,16 +54,16 @@
 
 .StudentData {
     display: flex;
-    justify-content: space-between; /* Przesuwa input na prawo */
-    align-items: center; /* Wyrównuje input i label w pionie */
-    width: 100%; /* Sprawia, że element zajmuje całą szerokość */
-    margin-bottom: 10px; /* Dodaje odstęp między etykietami */
+    justify-content: space-between; /* Moves the input to the right */
+    align-items: center; /* Aligns input and label vertically */
+    width: 100%; /* Makes the element occupy the entire width */
+    margin-bottom: 10px; /* Adds space between labels */
 }
 
 .StudentData input {
-    margin-left: 20px; /* Opcjonalnie, dodatkowy odstęp po lewej stronie inputa */
-    flex-grow: 1; /* Sprawia, że input zajmuje całą dostępną szerokość */
-    max-width: 300px; /* Maksymalna szerokość inputa */
+    margin-left: 20px;
+    flex-grow: 1; /* Makes the input occupy the available width */
+    max-width: 300px; /* Maximum width of the input */
     height: 30px;
     border: none;
     background: transparent;
@@ -74,9 +76,9 @@
 }
 
 .StudentData select {
-    margin-left: 20px; /* Opcjonalnie, dodatkowy odstęp po lewej stronie inputa */
-    flex-grow: 1; /* Sprawia, że input zajmuje całą dostępną szerokość */
-    max-width: 300px; /* Maksymalna szerokość inputa */
+    margin-left: 20px;
+    flex-grow: 1;
+    max-width: 300px;
     height: 30px;
     border: none;
     background: transparent;
@@ -87,9 +89,9 @@
 }
 
 .StudentData select option {
-    color: black; /* Kolor tekstu dla opcji w rozwijanym menu */
-    background-color: white; /* Tło opcji */
-} 
+    color: black; /* Text color for the options in the dropdown */
+    background-color: white; /* Background of the options */
+}
 
 .AddStudentContainer.show {
     opacity: 1;
@@ -100,13 +102,13 @@
 
 .buttons {
     display: flex;
-    justify-content: flex-end; /* Przyciski wyrównane do prawej */
+    justify-content: flex-end; /* Buttons aligned to the right */
     gap: 10px;
 }
 
 .StudentTableContainer.show {
     opacity: 1;
-    max-height: 70vh; /* Wystarczająco duża wartość, aby pomieścić całą tabelę */
+    max-height: 70vh;
 }
 
 /* Styling for the Reset Filters button */
@@ -129,18 +131,16 @@
 }
 
 .przycisk:hover {
-    background-color: #5A6268; /* Trochę ciemniejszy odcień na hover */
-    transform: translateY(-2px); /* Delikatne podniesienie na hover */
+    background-color: #5A6268; /* Slightly darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .przycisk:active {
-    background-color: #343A40; /* Głębszy szary na aktywne kliknięcie */
-    transform: translateY(0); /* Reset podniesienia na kliknięcie */
+    background-color: #343A40; /* Deeper gray on active click */
+    transform: translateY(0); /* Reset the lift on click */
 }
 
 /* Styling for filter inputs */
-
-
 .filter-container input:focus,
 .filter-container select:focus {
     border-color: #007bff;
@@ -180,7 +180,6 @@
     border-radius: 5px; 
 }
 
-
 .filter-container input[type="text"],
 .filter-container select {
     width: 20%;
@@ -198,30 +197,30 @@
 }
 
 .student-table th, .student-table td {
-    padding: 2px 4px; /* Zmniejszony padding, aby wiersze były niższe */
+    padding: 2px 4px; /* Reduced padding for lower row height */
     text-align: left;
     border-bottom: 1px solid #ddd;
     line-height: 1.2;
 }
 
-/* Transparentne tło dla wszystkich rekordów */
+/* Transparent background for all records */
 .student-table tbody tr {
-    background-color: transparent; /* Transparentne tło */
-    transition: background-color 0.3s ease; /* Płynne przejście koloru tła */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-/* Naprzemienne kolory tła */
+/* Alternating row background colors */
 .student-table tbody tr:nth-child(even) {
-    background-color: transparent /* Lekko ciemniejsze transparentne tło dla naprzemiennych wierszy */
+    background-color: transparent /* Slightly darker transparent background for alternating rows */
 }
 
-/* Przyciemnienie tła po najechaniu, nadpisuje inne tła */
+/* Darkened background on hover, overrides other backgrounds */
 .student-table tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.3) !important; /* Ważny styl dla przyciemnienia */
+    background-color: rgba(0, 0, 0, 0.3) !important; /* Important style for darkening */
     cursor: pointer;
 }
 
-/* Styl dla nagłówków tabeli */
+/* Style for table headers */
 .student-table thead {
     background-color: transparent;
     color: white;
@@ -248,9 +247,8 @@
     font-size: 20px;
     color: #fff;
 }
-  
 
-/* Styl dla paginacji */
+/* Style for pagination */
 .pagination {
     display: flex;
     justify-content: center;
@@ -283,7 +281,7 @@
     border-color: #007bff;
 }
 
-/* Styl dla modala */
+/* Style for modal */
 .modal {
     position: fixed;
     top: 0;
@@ -343,7 +341,6 @@
     display: flex;
     justify-content: center;
 }
-
 
 .modal-actions {
     display: flex;

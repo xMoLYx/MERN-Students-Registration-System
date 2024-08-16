@@ -32,7 +32,7 @@ export default function Dashboard() {
   const handleHomeClick = () => {
     setShowGraphs(true);
     setShowTable(false);
-    setIsLeftVisible(false); // Optional: Hide `left` when returning to Home
+    setIsLeftVisible(false);
   };
 
   const handleManagementClick = () => {

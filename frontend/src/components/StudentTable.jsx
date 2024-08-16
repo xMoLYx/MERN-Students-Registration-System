@@ -356,7 +356,6 @@ const StudentTable = ({ availableFilters, setAvailableFilters }) => {
         <table className="student-table">
           <thead>
             <tr>
-              {/* Table headers */}
               <th>ID</th>
               <th>First Name</th>
               <th>Last Name</th>
