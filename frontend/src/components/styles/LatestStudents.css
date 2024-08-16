@@ -1,0 +1,25 @@
+.latest-students {
+    padding-left: 20px; /* Dopasuj wartość, aby wyrównać z "Department Supervisors" */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    font-size: 12px;
+}
+
+.latest-students ul {
+    list-style-type: none; /* Usuwa domyślne kropki generowane przez <li> */
+    padding-left: 0; /* Usuwa dodatkowy odstęp po lewej stronie, jeśli jest */
+    line-height: 1;
+    margin-top: 13px;
+}
+
+.latest-students li {
+    margin-bottom: 12px;
+    margin-right: 5px; /* Dodaje odstęp między elementami */
+}
+
+.latest-students h3 {
+    font-size: 1.2em; /* Dopasuj rozmiar do własnych potrzeb */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}

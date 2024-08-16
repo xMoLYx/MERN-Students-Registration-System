@@ -1,0 +1,357 @@
+/* Styl dla kontenera tabeli */
+.table-container {
+    width: 100%;
+    height: 70%; /* Dostosuj do wymaganego rozmiaru */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 50%;
+}
+.student-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.StudentsMenu {
+    width: 100%;
+    display: flex;
+}
+/* Styl dla tabeli */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    height: 70%;
+}
+
+.StudentTableContainer {
+    opacity: 0;
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.AddStudentContainer {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, height;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.StudentData {
+    display: flex;
+    justify-content: space-between; /* Przesuwa input na prawo */
+    align-items: center; /* Wyrównuje input i label w pionie */
+    width: 100%; /* Sprawia, że element zajmuje całą szerokość */
+    margin-bottom: 10px; /* Dodaje odstęp między etykietami */
+}
+
+.StudentData input {
+    margin-left: 20px; /* Opcjonalnie, dodatkowy odstęp po lewej stronie inputa */
+    flex-grow: 1; /* Sprawia, że input zajmuje całą dostępną szerokość */
+    max-width: 300px; /* Maksymalna szerokość inputa */
+    height: 30px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+}
+
+.StudentData input:focus-visible {
+    outline: none;
+}
+
+.StudentData select {
+    margin-left: 20px; /* Opcjonalnie, dodatkowy odstęp po lewej stronie inputa */
+    flex-grow: 1; /* Sprawia, że input zajmuje całą dostępną szerokość */
+    max-width: 300px; /* Maksymalna szerokość inputa */
+    height: 30px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    outline: none;
+    border-radius: 5px;
+}
+
+.StudentData select option {
+    color: black; /* Kolor tekstu dla opcji w rozwijanym menu */
+    background-color: white; /* Tło opcji */
+} 
+
+.AddStudentContainer.show {
+    opacity: 1;
+    height: 68vh;
+    margin-top: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end; /* Przyciski wyrównane do prawej */
+    gap: 10px;
+}
+
+.StudentTableContainer.show {
+    opacity: 1;
+    max-height: 70vh; /* Wystarczająco duża wartość, aby pomieścić całą tabelę */
+}
+
+/* Styling for the Reset Filters button */
+.przycisk {
+    padding: 8px 16px;
+    background-color: #5d7c75;
+    transition: ease-in 0.5s;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px; /* Add some space between the button and the next input */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 24px;
+}
+
+.przycisk:hover {
+    background-color: #5A6268; /* Trochę ciemniejszy odcień na hover */
+    transform: translateY(-2px); /* Delikatne podniesienie na hover */
+}
+
+.przycisk:active {
+    background-color: #343A40; /* Głębszy szary na aktywne kliknięcie */
+    transform: translateY(0); /* Reset podniesienia na kliknięcie */
+}
+
+/* Styling for filter inputs */
+
+
+.filter-container input:focus,
+.filter-container select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Aligning the filter container items */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-container input,
+.filter-container select {
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex: 1;
+    color: #000;
+    background-color: #fff; 
+}
+
+.filter-container select option {
+    padding: 10px;  
+    color: #000;  
+    background-color: #fff;  
+}
+
+.filter-container select:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1); 
+    border: 1px solid rgba(81, 203, 238, 1); 
+    border-radius: 5px; 
+}
+
+
+.filter-container input[type="text"],
+.filter-container select {
+    width: 20%;
+    color: #000;
+}
+
+.filter-container input[type="text"]:last-child,
+.filter-container select:last-child {
+    margin-right: 0;
+    color: #000;
+}
+
+.table-container h2 {
+    margin-bottom: 20px;
+}
+
+.student-table th, .student-table td {
+    padding: 2px 4px; /* Zmniejszony padding, aby wiersze były niższe */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    line-height: 1.2;
+}
+
+/* Transparentne tło dla wszystkich rekordów */
+.student-table tbody tr {
+    background-color: transparent; /* Transparentne tło */
+    transition: background-color 0.3s ease; /* Płynne przejście koloru tła */
+}
+
+/* Naprzemienne kolory tła */
+.student-table tbody tr:nth-child(even) {
+    background-color: transparent /* Lekko ciemniejsze transparentne tło dla naprzemiennych wierszy */
+}
+
+/* Przyciemnienie tła po najechaniu, nadpisuje inne tła */
+.student-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.3) !important; /* Ważny styl dla przyciemnienia */
+    cursor: pointer;
+}
+
+/* Styl dla nagłówków tabeli */
+.student-table thead {
+    background-color: transparent;
+    color: white;
+}
+
+.Action {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.Action:hover {
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.Action ion-icon {
+    font-size: 20px;
+    color: #fff;
+}
+  
+
+/* Styl dla paginacji */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    list-style: none;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+.pagination li.active a {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Styl dla modala */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border: none;
+    background: rgba(40,31,97,0.25);
+    -webkit-backdrop-filter: blur(34px);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 30px;
+    transition: 1s ease-in;
+}
+
+.modal-content label,
+.modal-content h3 {
+    color: #fff;
+}
+
+.modal-content label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.modal-content input {
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: #fff;
+    float: right;
+    text-align: left;
+}
+
+.modal-content input:focus-visible {
+    outline: none;
+}
+
+.modal-content h3 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-actions button {
+    padding: 5px 10px;
+    cursor: pointer;
+}

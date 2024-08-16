@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom'; // Import the useParams hook
 import { toast } from 'react-hot-toast';
+import './Styles/ResetPassword.css';
 
 const ResetPassword = () => {
     const { token } = useParams(); // Extract the token from the URL
@@ -39,29 +40,31 @@ const ResetPassword = () => {
     };
 
     return (
-        <div className="box">
-            <div className="main_box">
-                <h2>Reset Password</h2>
-                <form onSubmit={resetPassword}>
-                    <div className="input_box">
-                        <span className="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        {/* Input field for password */}
-                        <input type="password" value={password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} required />
-                        <label>Password</label>
-                    </div>
-                    <div className="input_box">
-                        <span className="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        {/* Input field for confirming password */}
-                        <input type="password" value={confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })} required />
-                        <label>Confirm Password</label>
-                    </div>
-                    {/* Button to submit password reset form */}
-                    <button type="submit" className="button">Reset Password</button>
-                    <div className="login_register">
-                        {/* Link to navigate back to login page */}
-                        <p>Remembered your password? <a href="#" className="backlogin-link" onClick={() => navigate('/login')}>Back to Login</a></p>
-                    </div>
-                </form>
+        <div className='container'>
+            <div className="box">
+                <div className="main_box">
+                    <h2>Reset Password</h2>
+                    <form onSubmit={resetPassword}>
+                        <div className="input_box">
+                            <span className="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            {/* Input field for password */}
+                            <input type="password" value={password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} required />
+                            <label>Password</label>
+                        </div>
+                        <div className="input_box">
+                            <span className="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                            {/* Input field for confirming password */}
+                            <input type="password" value={confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })} required />
+                            <label>Confirm Password</label>
+                        </div>
+                        {/* Button to submit password reset form */}
+                        <button type="submit" className="button">Reset Password</button>
+                        <div className="login_register">
+                            {/* Link to navigate back to login page */}
+                            <p>Remembered your password? <a href="#" className="backlogin-link" onClick={() => navigate('/')}>Back to Login</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );

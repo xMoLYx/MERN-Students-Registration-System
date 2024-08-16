@@ -1,0 +1,51 @@
+.supervisors-container h3 {
+    font-size: 1.2em; /* Dopasuj rozmiar do własnych potrzeb */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.supervisor-item {
+    margin: 10px;
+    line-height: 3;
+    font-size: 13px;
+}
+.supervisors {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin-left: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-biology {
+    background-color: #16cc50;
+}
+
+.dot-chemistry {
+    background-color: #196ee6;
+}
+
+.dot-computer-science {
+    background-color: #e6b219;
+}
+
+.dot-mathematics {
+    background-color: #e6196e;
+}
+
+.dot-physics {
+    background-color: rgb(25, 195, 230);
+}
+
+.dot-economics {
+    background-color: #116149;
+}
