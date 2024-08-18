@@ -1,38 +1,41 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/userContext';
 import { useContext } from 'react';
 import Button from './MenuButton';
 import './Styles/Navbar.css';
 
-const Navbar = ({ onHomeClick, onStudentClick, onTeacherClick, onReportsClick, onLogoutClick }) => {
+const Navbar = ({ setShowGraphs, setShowTable, setIsLeftVisible }) => {
+    
+    const { user } = useContext(UserContext);
 
     const handleHomeClick = () => {
         console.log('Home clicked');
-        onHomeClick(); // Call the prop function to show graphs and hide the table
+        setShowGraphs(true); // Show graphs
+        setShowTable(false); // Hide table
+        setIsLeftVisible(false); // Optionally hide the left section
     };
 
     const handleStudentClick = () => {
         console.log('Student Management clicked');
-        onStudentClick(); // Call the prop function to show the table and hide the graphs
+        setShowGraphs(false); // Hide graphs
+        setShowTable(true); // Show table
+        setIsLeftVisible(true); // Optionally show the left section
     };
 
     const handleTeacherClick = () => {
         console.log('Teacher clicked');
-        onTeacherClick(); // Optional: Implement similar logic for teacher management
+        // Implement similar logic if needed
     };
 
     const handleReportsClick = () => {
         console.log('Report clicked');
-        onReportsClick(); // Optional: Implement similar logic for reports
+        // Implement similar logic if needed
     };
 
     const handleLogoutClick = () => {
         console.log('Logout clicked');
-        onLogoutClick(); // Optional: Implement logout functionality
+        // Implement logout functionality
     };
-
-    const { user } = useContext(UserContext);
 
     return (
         <div className="Navbar"> 

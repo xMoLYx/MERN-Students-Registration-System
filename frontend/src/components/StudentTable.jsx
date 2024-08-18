@@ -296,7 +296,7 @@ const StudentTable = ({ availableFilters, setAvailableFilters }) => {
 
       <div className={`StudentTableContainer ${showTable ? 'show' : ''}`}>
       <div className="filter-container">
-        <button className='przycisk' onClick={handleResetFilters}>
+        <button className='ResetFilters' onClick={handleResetFilters}>
           Reset Filters
         </button>
 

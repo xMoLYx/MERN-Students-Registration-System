@@ -89,7 +89,7 @@
 }
 
 .StudentData select option {
-    color: black; /* Text color for the options in the dropdown */
+    color: #000; /* Text color for the options in the dropdown */
     background-color: white; /* Background of the options */
 }
 
@@ -112,7 +112,7 @@
 }
 
 /* Styling for the Reset Filters button */
-.przycisk {
+.ResetFilters {
     padding: 8px 16px;
     background-color: #5d7c75;
     transition: ease-in 0.5s;
@@ -130,12 +130,12 @@
     height: 24px;
 }
 
-.przycisk:hover {
+.ResetFilters:hover {
     background-color: #5A6268; /* Slightly darker shade on hover */
     transform: translateY(-2px); /* Slight lift on hover */
 }
 
-.przycisk:active {
+.ResetFilters:active {
     background-color: #343A40; /* Deeper gray on active click */
     transform: translateY(0); /* Reset the lift on click */
 }

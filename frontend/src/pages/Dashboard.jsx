@@ -29,25 +29,15 @@ export default function Dashboard() {
     fieldOfStudy: ''
   });
 
-  const handleHomeClick = () => {
-    setShowGraphs(true);
-    setShowTable(false);
-    setIsLeftVisible(false);
-  };
-
-  const handleManagementClick = () => {
-    setShowGraphs(false);
-    setShowTable(true);
-    setIsLeftVisible(true);
-  };
 
   return (
     <>
       <Banner class="header"/>
       <div className='Dashboard'>
         <Navbar 
-          onHomeClick={handleHomeClick} 
-          onStudentClick={handleManagementClick} 
+          setShowGraphs={setShowGraphs} 
+          setShowTable={setShowTable} 
+          setIsLeftVisible={setIsLeftVisible} 
         />
         <div className='content'>
           <div className={`left ${isLeftVisible ? 'visible' : 'transparent'}`}>
