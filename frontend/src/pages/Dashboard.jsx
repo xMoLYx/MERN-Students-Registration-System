@@ -1,42 +1,28 @@
-import React, { useState, useContext } from 'react';
-import { UserContext } from '../../context/userContext';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import StudentsByFoS from '../components/StudentsByFoS';
 import StudentsByYoS from '../components/StudentsByYoS';
 import SupervisorList from '../components/SupervisorList';
-import LatestStudents from '../components/LatestStudents'
+import LatestStudents from '../components/LatestStudents';
 import StudentTable from '../components/StudentTable';
+import TeacherTable from '../components/TeacherTable';
 import './Styles/Dashboard.css';
 
 export default function Dashboard() {
   const [isLeftVisible, setIsLeftVisible] = useState(false);
   const [showGraphs, setShowGraphs] = useState(true);
   const [showTable, setShowTable] = useState(false);
-
-  const [availableFilters, setAvailableFilters] = useState({
-    years: [],
-    groups: [],
-    fieldsOfStudy: []
-  });
-
-  const [filters, setFilters] = useState({
-    ID: '',
-    firstName: '',
-    lastName: '',
-    year: '',
-    group: '',
-    fieldOfStudy: ''
-  });
-
+  const [showTeacherTable, setShowTeacherTable] = useState(false);
 
   return (
     <>
-      <Banner class="header"/>
+      <Banner className="header" />
       <div className='Dashboard'>
         <Navbar 
           setShowGraphs={setShowGraphs} 
           setShowTable={setShowTable} 
+          setShowTeacherTable={setShowTeacherTable}
           setIsLeftVisible={setIsLeftVisible} 
         />
         <div className='content'>
@@ -52,11 +38,10 @@ export default function Dashboard() {
               </>
             )}
             {showTable && (
-              <StudentTable
-                filters={filters}
-                availableFilters={availableFilters}
-                setAvailableFilters={setAvailableFilters}
-              />
+              <StudentTable />
+            )}
+            {showTeacherTable && (
+              <TeacherTable />
             )}
           </div>
           <div className='right'>

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
-const { resetPassword, updatePassword, registerUser, loginUser, getProfile } = require('../controllers/authController');
-const { getSupervisors } = require('../controllers/teachersController');
+const { resetPassword, updatePassword, registerUser, loginUser, getProfile, logoutUser } = require('../controllers/authController');
+const { getSupervisors, getAllTeachers, updateTeacher, addTeacher, deleteTeacher } = require('../controllers/teachersController');
 const { getLatestStudents, getAllStudents, updateStudent, addStudent, deleteStudent} = require('../controllers/studentsController');
 
 // Middleware for enabling CORS with credentials and setting origin
@@ -36,6 +36,9 @@ router.get('/reset-password/:token', (req, res) => {
     res.render('reset_password', { token }); 
 });
 
+// Route for user logout
+router.post('/logout', logoutUser);
+
 // Route to get all supervisors
 router.get('/api/supervisors', getSupervisors);
 
@@ -48,8 +51,22 @@ router.get('/api/students', getAllStudents);
 // Route to update a student's data
 router.put('/api/students/:id', updateStudent);
 
+// Route to add a student
 router.post('/addStudent', addStudent)
 
+// Route to delete a student
 router.delete('/api/students/:id', deleteStudent);
+
+// Route to get all teachers
+router.get('/api/Teachers', getAllTeachers);
+
+// Route to update a teacher's data
+router.put('/api/teachers/:id', updateTeacher);
+
+// Route to add a teacher
+router.post('/addTeacher', addTeacher)
+
+// Route to delete a teacher
+router.delete('/api/teachers/:id', deleteTeacher);
 
 module.exports = router;

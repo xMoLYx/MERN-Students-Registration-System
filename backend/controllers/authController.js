@@ -153,6 +153,12 @@ const updatePassword = async (req, res) => {
     }
 };
 
+// Function to logout user
+const logoutUser = (req, res) => {
+    res.clearCookie('token');
+    res.json({ message: 'Logged out successfully' });
+};
+
 // Function to get user profile
 const getProfile = (req, res) => {
     const {token} = req.cookies
@@ -171,5 +177,6 @@ module.exports = {
     loginUser,
     getProfile,
     resetPassword,
-    updatePassword
+    updatePassword,
+    logoutUser
 }

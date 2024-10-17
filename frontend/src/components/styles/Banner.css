@@ -3,4 +3,8 @@
     color: #fff;
     user-select: none;
     text-shadow: 2px 2px #3d3d3d;
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+    padding-top: 20px;
 }
