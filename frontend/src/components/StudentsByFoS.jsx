@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styles/StudentsByFoS.css';
+import './styles/StudentsByFoS.css';
 
 
 const StudentsByFoS = () => {

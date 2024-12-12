@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Styles/SupervisorList.css';
+import './styles/SupervisorList.css';
 
 const SupervisorList = () => {
     const [supervisors, setSupervisors] = useState([]);

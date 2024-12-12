@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Styles/LatestStudents.css';
+import './styles/LatestStudents.css';
 
 const LatestStudents = () => {
     const [students, setStudents] = useState([]);

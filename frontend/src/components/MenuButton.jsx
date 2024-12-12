@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styles/MenuButton.css';
+import './styles/MenuButton.css';
 
 const Button = ({ text, onClick }) => {
     return (

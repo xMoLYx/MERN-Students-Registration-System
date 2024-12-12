@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styles/ConfirmDialog.css';
+import './styles/ConfirmDialog.css';
 import Button from './MenuButton';
 
 const ConfirmDialog = ({ title, message, onConfirm, onCancel }) => {

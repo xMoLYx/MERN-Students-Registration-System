@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Styles/StudentTable.css';
+import './styles/StudentTable.css';
 import ReactPaginate from 'react-paginate';
 import Button from './MenuButton';
 import ConfirmDialog from './ConfirmDialog';

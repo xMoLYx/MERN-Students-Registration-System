@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from 'react';
 import { UserContext } from '../../context/userContext';
 import Button from './MenuButton';
-import './Styles/Navbar.css';
+import './styles/Navbar.css';
 import { useNavigate } from 'react-router-dom'; // Added useNavigate
 import axios from 'axios';
 import toast from "react-hot-toast";
