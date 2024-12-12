@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false}))
-
+app.use(cors());
 app.use('/', require('./routes/authRoutes'))
 
 const port = 2525;
