@@ -7,7 +7,7 @@ import SupervisorList from '../components/SupervisorList';
 import LatestStudents from '../components/LatestStudents';
 import StudentTable from '../components/StudentTable';
 import TeacherTable from '../components/TeacherTable';
-import './Styles/Dashboard.css';
+import './styles/Dashboard.css';
 
 export default function Dashboard() {
   const [isLeftVisible, setIsLeftVisible] = useState(false);
