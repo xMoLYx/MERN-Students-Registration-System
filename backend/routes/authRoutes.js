@@ -10,7 +10,7 @@ router.use(
     cors({
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        origin: ['http://localhost:4173', 'http://localhost:5173']
+        origin: ['http://localhost:4173', 'http://localhost:5173', 'https://mern-students-registration-system-kli3-nyki9h6or.vercel.app']
     })
 );
 
