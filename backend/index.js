@@ -21,7 +21,7 @@ const corsOptions = {
   origin: [
     'http://localhost:4173', // Lokalny adres dla testów
     'http://localhost:5173', // Lokalny adres dla testów (Vite)
-    'https://mern-students-registration-system-kli3.vercel.app, // Frontend na Vercel
+    'https://mern-students-registration-system-kli3.vercel.app',
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
