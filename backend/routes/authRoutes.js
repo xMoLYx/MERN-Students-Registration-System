@@ -9,7 +9,8 @@ const { getLatestStudents, getAllStudents, updateStudent, addStudent, deleteStud
 router.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:5173'
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        origin: 'http://localhost:4173'
     })
 );
 

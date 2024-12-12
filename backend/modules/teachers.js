@@ -38,7 +38,7 @@ const teacherSchema = new Schema({
     },
     supervised_department: {
         type: String,
-        required: function() { return this.is_supervisor; }  // only required if is_supervisor is true
+        required: function() { return this.is_supervisor; }
     }
 });
 
