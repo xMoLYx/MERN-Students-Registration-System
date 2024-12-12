@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom'; // Import the useParams hook
 import { toast } from 'react-hot-toast';
-import './Styles/ResetPassword.css';
+import './styles/ResetPassword.css';
 
 const ResetPassword = () => {
     const { token } = useParams(); // Extract the token from the URL

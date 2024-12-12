@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Banner from '../components/Banner';
 import { IonIcon } from '@ionic/react';
 import { personOutline, lockClosedOutline, mailOutline } from 'ionicons/icons';
-import './Styles/Login.css';
+import './styles/Login.css';
 
 export default function Login() {
     const navigate = useNavigate();
