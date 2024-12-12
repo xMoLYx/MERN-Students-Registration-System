@@ -5,14 +5,6 @@ const { resetPassword, updatePassword, registerUser, loginUser, getProfile, logo
 const { getSupervisors, getAllTeachers, updateTeacher, addTeacher, deleteTeacher } = require('../controllers/teachersController');
 const { getLatestStudents, getAllStudents, updateStudent, addStudent, deleteStudent} = require('../controllers/studentsController');
 
-// Middleware for enabling CORS with credentials and setting origin
-router.use(
-    cors({
-        credentials: true,
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        origin: ['http://localhost:4173', 'http://localhost:5173', 'https://mern-students-registration-system-kli3.vercel.app']
-    })
-);
 
 // Route for user registration
 router.post('/register', registerUser);
