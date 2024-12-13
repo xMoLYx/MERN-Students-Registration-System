@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './styles/SupervisorList.css';
 
+const ListOfSupervisorsLink = import.meta.env.VITE_API_URL;
 const SupervisorList = () => {
     const [supervisors, setSupervisors] = useState([]);
 
     useEffect(() => {
-        fetch('${import.meta.env.VITE_API_URL}/api/supervisors')
+        fetch(`${ListOfSupervisorsLink}/api/supervisors`)
             .then(response => response.json())
             .then(data => setSupervisors(data))
             .catch(error => console.error('Error fetching supervisors:', error));
