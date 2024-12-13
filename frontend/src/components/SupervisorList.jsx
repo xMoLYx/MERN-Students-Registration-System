@@ -5,7 +5,7 @@ const SupervisorList = () => {
     const [supervisors, setSupervisors] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/supervisors')
+        fetch('${import.meta.env.VITE_API_URL}/api/supervisors')
             .then(response => response.json())
             .then(data => setSupervisors(data))
             .catch(error => console.error('Error fetching supervisors:', error));
