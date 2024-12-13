@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './styles/LatestStudents.css';
 
+const ListOfStudentsLink = import.meta.env.VITE_API_URL;
 const LatestStudents = () => {
     const [students, setStudents] = useState([]);
 
     const fetchLatestStudents = () => {
-        fetch('${import.meta.env.VITE_API_URL}/api/students/latest')
+        fetch(`${ListOfStudentsLink}/api/students/latest`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
