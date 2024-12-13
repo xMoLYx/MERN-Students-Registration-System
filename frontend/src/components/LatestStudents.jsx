@@ -5,7 +5,7 @@ const LatestStudents = () => {
     const [students, setStudents] = useState([]);
 
     const fetchLatestStudents = () => {
-        fetch('http://localhost:8000/api/students/latest')
+        fetch('${import.meta.env.VITE_API_URL}/api/students/latest')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
