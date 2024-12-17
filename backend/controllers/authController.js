@@ -96,7 +96,7 @@ const sendPasswordResetEmail = async (email, token) => {
         from: process.env.USER_EMAIL,
         to: email,
         subject: 'Password reset',
-        text: `Click this link to reset your password: http://localhost:5173/reset-password/${token}`
+        text: `Click this link to reset your password: ${process.env.FRONT_URL}/reset-password/${token}`
     };
 
     await transporter.sendMail(mailOptions);
